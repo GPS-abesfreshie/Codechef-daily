@@ -42,13 +42,13 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T13:48:54.636Z  
+**Submitted:** 2026-10-05T13:48:29.581Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-long long long fac(long long long N){
+long long fac(long long N){
     if(N<=1)return N;
     return N*fac(N-1);
 }
@@ -56,7 +56,7 @@ int main() {
 	int T;
 	cin>>T;
 	while(T--){
-	    long long long N;
+	    long long N;
 	    cin>>N;
 	    cout<<fac(N)<<endl;
 	}
