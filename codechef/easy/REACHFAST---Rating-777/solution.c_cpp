@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int A,B,K,ans;
+	    cin>>A>>B>>K;
+	    if(A==B){
+	        ans=0;
+	    }
+	    else if(A>B){
+	        ans=A-B;
+	    }
+	    else{
+	        ans=B-A;
+	    }
+	    if(K>ans && ans!=0){
+	        cout<<1<<endl;
+	    }
+	    else if(ans%K==0){
+	        cout<<ans/K<<endl;
+	    }
+	    else{
+	        cout<<ans/K+(ans%K)<<endl;
+	    }
+	}
+}
