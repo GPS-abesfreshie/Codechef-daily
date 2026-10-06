@@ -42,23 +42,36 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T04:19:17.060Z  
+**Submitted:** 2026-10-06T04:57:30.149Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-long long fac(long long N){
-    if(N<=1)return N;
-    return N*fac(N-1);
-}
 int main() {
 	int T;
 	cin>>T;
 	while(T--){
-	    long long N;
+	    int N;
 	    cin>>N;
-	    cout<<fac(N)<<endl;
+	    vector<int>ans;
+	    ans[0]=1;
+	    for(int x=2;x<=N;x++){
+	        int carry=0;
+	        for(size_t i=0;i<ans.size();i++){
+	            int prod=ans[i]*x+carry;
+	            ans[i]=prod%10;
+	            carry=prod/10;
+	        }
+	    while(carry){
+	        ans.push_back(carry%10);
+	        carry/=10;
+	    }     
+	    }
+	    for(int i=ans.size()-1;i>=0;i++){
+	        cout<<ans[i];
+	    }
+	    cout<<"\n";
 	}
 }
 ```
