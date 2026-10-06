@@ -42,7 +42,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T05:00:25.290Z  
+**Submitted:** 2026-10-06T04:59:34.525Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -56,19 +56,19 @@ int main() {
 	    cin>>N;
 	    vector<int>ans;
 	    ans.push_back(1);
+	    int carry=0;
 	    for(int x=2;x<=N;x++){
-	        int carry=0;
 	        for(size_t i=0;i<ans.size();i++){
 	            int prod=ans[i]*x+carry;
 	            ans[i]=prod%10;
 	            carry=prod/10;
 	        }
+	    }
 	    while(carry){
 	        ans.push_back(carry%10);
 	        carry/=10;
-	    }     
-	    }
-	    for(int i=ans.size()-1;i>=0;i){
+	    }  
+	    for(int i=ans.size()-1;i>=0;i--){
 	        cout<<ans[i];
 	    }
 	    cout<<"\n";
