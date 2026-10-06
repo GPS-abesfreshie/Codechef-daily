@@ -42,7 +42,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T13:48:29.581Z  
+**Submitted:** 2026-10-06T04:19:12.318Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -61,7 +61,6 @@ int main() {
 	    cout<<fac(N)<<endl;
 	}
 }
-
 ```
 
 ---
