@@ -42,7 +42,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T04:58:58.539Z  
+**Submitted:** 2026-10-06T05:00:25.290Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -63,12 +63,12 @@ int main() {
 	            ans[i]=prod%10;
 	            carry=prod/10;
 	        }
-	    }
 	    while(carry){
 	        ans.push_back(carry%10);
 	        carry/=10;
-	    }  
-	    for(int i=ans.size()-1;i>=0;i--){
+	    }     
+	    }
+	    for(int i=ans.size()-1;i>=0;i){
 	        cout<<ans[i];
 	    }
 	    cout<<"\n";
