@@ -59,7 +59,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T18:28:30.801Z  
+**Submitted:** 2026-10-11T12:12:44.858Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -71,24 +71,28 @@ int main() {
 	while(T--){
 	    int A,B,K,ans;
 	    cin>>A>>B>>K;
-	    if(A==B){
-	        ans=0;
-	    }
-	    else if(A>B){
-	        ans=A-B;
-	    }
-	    else{
-	        ans=B-A;
-	    }
-	    if(K>ans && ans!=0){
-	        cout<<1<<endl;
-	    }
-	    else if(ans%K==0){
-	        cout<<ans/K<<endl;
-	    }
-	    else{
-	        cout<<ans/K+(ans%K)<<endl;
-	    }
+	    int step;
+        if(A==B){
+            cout<<0<<"\n";
+        }
+        else if(A>B){
+                step=A-B;
+                if(step%K==0){
+            cout<<step/K<<endl;
+        }
+        else{
+            cout<<(step/K)+1<<endl;
+        }
+        }
+        else{
+            step=B-A;
+            if(step%K==0){
+            cout<<step/K<<endl;
+        }
+        else{
+            cout<<(step/K)+1<<endl;
+        }
+    }
 	}
 }
 
