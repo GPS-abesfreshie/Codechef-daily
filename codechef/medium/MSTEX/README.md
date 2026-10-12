@@ -63,7 +63,7 @@ For the third test case, Chef buys only the most expensive item, which costs $11
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T15:52:12.294Z  
+**Submitted:** 2026-10-12T16:01:51.935Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -75,24 +75,16 @@ int main() {
 	while(T--){
 	    int N,K;
 	    cin>>N>>K;
-	    int arr[N];
+	    vector <int> C(N);
 	    for(int i=0;i<N;i++){
-	        cin>>arr[i];
+	        cin>>C[i];
 	    }
+	    sort(C.begin(), C.end(), greater<int>());
 	    int ans=0;
-	    int max=arr[0],a=0;
-	    while(K--){
-	        for(int i=0;i<N;i++){
-	            if(arr[i]>max){
-	                max=arr[i];
-	                a=i;
-	            }
-	        }
-	        ans+=max;
-	        arr[a]=-1;
-	        max=arr[0];
-	    }
-	    cout<<ans<<endl;
+	     for (int i = 0; i < K; i++) {
+            ans +=C[i];
+	     }
+	     cout<<ans<<endl;
 	}
 }
 
