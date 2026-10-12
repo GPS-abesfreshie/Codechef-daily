@@ -67,7 +67,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T15:35:33.123Z  
+**Submitted:** 2026-10-12T15:37:23.528Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -79,29 +79,14 @@ int main() {
 	while(T--){
 	    int A,B,C;
 	    cin>>A>>B>>C;
-	    if(A>B){
-	        if(A>=C){
-	            cout<<A<<endl;
-	        }
-	        else if(C>A){
-	            cout<<C<<endl;
-	        }
+	    if(A>=B && A>=C){
+	        cout<<A<<endl;
 	    }
-	    else if(B>A){
-	        if(B>=C){
-	            cout<<B<<endl;
-	        }
-	        else if(C>B){
-	            cout<<C<<endl;
-	        }
+	    else if(B>=A && B>=C){
+	        cout<<B<<endl;
 	    }
-	    else if(C>A){
-	        if(C>=B){
-	            cout<<C<<endl;
-	        }
-	        else if(B>C){
-	            cout<<B<<endl;
-	        }
+	    else if(C>=A && C>=B){
+	        cout<<C<<endl;
 	    }
 	}
 }
