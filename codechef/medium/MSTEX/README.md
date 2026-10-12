@@ -63,7 +63,7 @@ For the third test case, Chef buys only the most expensive item, which costs $11
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T15:54:04.295Z  
+**Submitted:** 2026-10-12T15:51:56.564Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
