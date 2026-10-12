@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int A,B,C;
+	    cin>>A>>B>>C;
+	    if(A>B){
+	        if(A>=C){
+	            cout<<A<<endl;
+	        }
+	        else if(C>A){
+	            cout<<C<<endl;
+	        }
+	    }
+	    else if(B>A){
+	        if(B>=C){
+	            cout<<B<<endl;
+	        }
+	        else if(C>B){
+	            cout<<C<<endl;
+	        }
+	    }
+	    else if(C>A){
+	        if(C>=B){
+	            cout<<C<<endl;
+	        }
+	        else if(B>C){
+	            cout<<B<<endl;
+	        }
+	    }
+	}
+}
