@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int H,X,Y;
+	    cin>>H>>X>>Y;
+	    int ans=1;
+	    if(Y>=H){
+	        cout<<1<<endl;
+	    }
+	    else{
+	        H=H-Y;
+	        if(H%X==0){
+	            ans+=(H/X);
+	        }
+	        else{
+	            ans+=((H/X)+1);
+	        }
+	        cout<<ans<<endl;
+	    }
+	}
+}
