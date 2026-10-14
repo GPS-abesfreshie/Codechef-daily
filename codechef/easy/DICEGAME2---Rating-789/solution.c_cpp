@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int A[3],B[3];
+	    for(int i=0;i<3;i++){
+	        cin>>A[i];
+	    }
+	    for(int i=0;i<3;i++){
+	        cin>>B[i];
+	    }
+	    sort(A,A+3);
+	    sort(B,B+3);
+	    if((A[1]+A[2])==(B[1]+B[2])){
+	        cout<<"Tie\n";
+	    }
+	    else if((A[1]+A[2])>(B[1]+B[2])){
+	        cout<<"Alice\n";
+	    }
+	    else{
+	        cout<<"Bob\n";
+	    }
+	}
+}
