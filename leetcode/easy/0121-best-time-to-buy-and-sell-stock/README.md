@@ -42,34 +42,26 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 97.4 MB (beats 58.51%)  
-**Submitted:** 2026-10-25T19:54:45.484Z  
+**Memory:** 97.1 MB (beats 99.46%)  
+**Submitted:** 2026-10-25T19:56:48.921Z  
 
 ```cpp
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        // Handle empty or single-element arrays safely
-        if (prices.size() < 2) return 0;
-        
-        int min_price = prices[0]; // Tracks the cheapest buy day seen so far
-        int max_profit = 0;        // Tracks the highest profit found
-        
-        for (int i = 1; i < prices.size(); i++) {
-            // 1. If today's price is cheaper than our lowest recorded price, update it
-            if (prices[i] < min_price) {
-                min_price = prices[i];
-            } 
-            // 2. Otherwise, check if selling today yields a better profit
-            else if (prices[i] - min_price > max_profit) {
-                max_profit = prices[i] - min_price;
+        int min_price=prices[0];
+        int profit=0;
+        for(int i=1;i<=prices.size()-1;i++){
+            if(prices[i]<min_price){
+                min_price=prices[i];
+            }
+            else if((prices[i]-min_price)>profit){
+                profit=(prices[i]-min_price);
             }
         }
-        
-        return max_profit;        
+        return profit;        
     }
 };
-
 ```
 
 ---
