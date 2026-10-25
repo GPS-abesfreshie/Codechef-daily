@@ -40,34 +40,32 @@ Output: [0]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 15.48%)  
-**Memory:** 24.9 MB (beats 5.08%)  
-**Submitted:** 2026-10-25T11:21:02.058Z  
+**Runtime:** 1 ms (beats 18.71%)  
+**Memory:** 23.8 MB (beats 53.05%)  
+**Submitted:** 2026-10-25T12:10:13.408Z  
 
 ```cpp
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int count=0;
-        vector <int> ans;
-        for(int i=0;i<nums.size();i++){
-            if(nums[i]==0){
-                count++;
+        int insert_pos = 0;
+
+        // Step 1: Shift all non-zero elements to the front
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != 0) {
+                nums[insert_pos] = nums[i];
+                insert_pos++;
             }
         }
-        for(int i=0;i<nums.size();i++){
-            if(nums[i]!=0){
-                ans.push_back(nums[i]);
-            }
-        }
-        while(count--){
-            ans.push_back(0);
-        }
-        for(int i=0;i<nums.size();i++){
-            nums[i]=ans[i];
+
+        // Step 2: Fill the rest of the vector with zeroes
+        while (insert_pos < nums.size()) {
+            nums[insert_pos] = 0;
+            insert_pos++;
         }
     }
 };
+
 ```
 
 ---
