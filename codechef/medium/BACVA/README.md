@@ -57,7 +57,7 @@ For the third account number, the digit sum is $10$, which is divisible by $10$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T16:18:33.110Z  
+**Submitted:** 2026-10-26T16:19:15.408Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -70,7 +70,7 @@ int main() {
 	    int A;
 	    cin>>A;
 	    int sum=0;
-	    while(A){
+	    while(A>0){
 	        sum+=(A%10);
 	        A=A/10;
 	    }
