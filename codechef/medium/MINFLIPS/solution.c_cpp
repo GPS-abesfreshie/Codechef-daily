@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int N;
+	    cin>>N;
+	    int arr[N];
+	    for(int i=0;i<N;i++){
+	        cin>>arr[i];
+	    }
+	    int sum=0;
+	    if(N%2!=0){
+	        cout<<-1<<endl;
+	    }
+	    else{
+	        	    for(int i=0;i<N;i++){
+	        sum+=arr[i];
+	    }
+	    cout<<abs(sum/2)<<endl;
+	    }
+	}
+}
