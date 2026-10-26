@@ -2,21 +2,22 @@
 using namespace std;
 
 int main() {
-	int T;
-	cin>>T;
-	while(T--){
-	    long long A;
-	    cin>>A;
-	    long long sum=0;
-	    while(A>0){
-	        sum+=(A%10);
-	        A=A/10;
-	    }
-	    if(sum%10==0){
-	        cout<<"Valid\n";
-	    }
-	    else{
-	        cout<<"Invalid\n";
-	    }
-	}
+    int T;
+    cin >> T;
+    while (T--) {
+        string A;
+        cin >> A;
+        long long sum = 0;
+        for (char digit : A) {
+            sum += (digit - '0');
+        }
+        
+        if (sum % 10 == 0) {
+            cout << "Valid\n";
+        }
+        else {
+            cout << "Invalid\n";
+        }
+    }
+    return 0;
 }
