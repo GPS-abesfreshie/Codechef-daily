@@ -12,6 +12,6 @@ int main() {
 	        cin>>arr[i];
 	    }
 	    sort(arr,arr+N);
-	    cout<<arr[N-1];
+	    cout<<arr[N-1]<<endl;
 	}
 }
