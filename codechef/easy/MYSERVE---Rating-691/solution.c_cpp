@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int T;
+    cin>>T;
+    while(T--){
+        int P,Q;
+        cin>>P>>Q;
+        if(((P+Q)/2)%2==0){
+            cout<<"Alice\n";
+        }
+        else{
+            cout<<"Bob\n";
+        }
+    }
+}
