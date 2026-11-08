@@ -49,7 +49,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-08T09:58:10.640Z  
+**Submitted:** 2026-11-08T09:56:55.409Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -61,16 +61,15 @@ int main() {
 	while(t--){
 	    int n;
 	    cin>>n;
-        // if(n<=4){
-        //     cout<<n<<endl;
-        // }
-        // else if(n%5==0){
-        //     cout<<n-(n/5)<<endl;
-        // }
-        // else if(n%5!=0){
-        //     cout<<(n-(n%5))-((n-(n%5))/5)+n%5<<endl;
-        // }
-        cout<<n-(n/5)<<endl;
+        if(n<=4){
+            cout<<n<<endl;
+        }
+        else if(n%5==0){
+            cout<<n-(n/5)<<endl;
+        }
+        else if(n%5!=0){
+            cout<<(n-(n%5))-((n-(n%5))/5)+n%5<<endl;
+        }
 	}
 }
 
