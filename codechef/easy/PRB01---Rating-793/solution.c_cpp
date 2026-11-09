@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int N;
+	    cin>>N;
+	    string arr[N];
+	    int f=0,s=0;
+	    for(int i=0;i<N;i++){
+	        cin>>arr[i];
+	        if(arr[i]=="START38"){
+	            f++;
+	        }
+	        else{
+	            s++;
+	        }
+	    }
+	    cout<<f<<' '<<s<<endl;
+	}
+}
