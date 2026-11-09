@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	while(T--){
+	    int N;
+	    cin>>N;
+	     if(N<=1){
+	            cout<<"no\n";
+	            continue;
+	     }
+	     int count=0;
+	    for(int i=2;i<=N/2;i++){
+	        if(N%i==0){
+	            count++;
+	        }
+	    }
+	    if(count>0){
+	        cout<<"no\n";
+	    }
+	    else{
+	        cout<<"yes\n";
+	    }
+	}
+}
