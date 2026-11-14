@@ -12,11 +12,12 @@ Return  *the maximum profit you can achieve from this transaction*. If you canno
 
  
 
+Original
+C++
  **Example 1:** 
 
 ```
-Input: prices = [7,1,5,3,6,4]
-Output: 5
+Input:vector<int> prices = {7, 1, 5, 3, 6, 4};Output: 5
 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
@@ -25,8 +26,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
  **Example 2:** 
 
 ```
-Input: prices = [7,6,4,3,1]
-Output: 0
+Input:vector<int> prices = {7, 6, 4, 3, 1};Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 
 ```
@@ -41,25 +41,26 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 97.1 MB (beats 99.46%)  
-**Submitted:** 2026-10-25T19:56:48.921Z  
+**Runtime:** 2 ms (beats 30.85%)  
+**Memory:** 97.3 MB (beats 75.70%)  
+**Submitted:** 2026-11-14T08:15:07.118Z  
 
 ```cpp
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int min_price=prices[0];
-        int profit=0;
-        for(int i=1;i<=prices.size()-1;i++){
-            if(prices[i]<min_price){
-                min_price=prices[i];
+        int i=1,j=prices.size();
+        int mini=prices[0];
+        int max=0;
+        for(int i=0;i<j;i++){
+            if(mini>prices[i]){
+                mini=prices[i];
             }
-            else if((prices[i]-min_price)>profit){
-                profit=(prices[i]-min_price);
+            else if((prices[i]-mini)>max){
+                max=prices[i]-mini;
             }
         }
-        return profit;        
+        return max;      
     }
 };
 ```
