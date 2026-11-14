@@ -41,9 +41,9 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 30.85%)  
-**Memory:** 97.3 MB (beats 75.70%)  
-**Submitted:** 2026-11-14T08:15:07.118Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 97.2 MB (beats 92.17%)  
+**Submitted:** 2026-11-14T08:15:15.895Z  
 
 ```cpp
 class Solution {
