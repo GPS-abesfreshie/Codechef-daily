@@ -10,17 +10,13 @@ int main() {
 	    vector<int> A(N);
 	    int sum=0;
 	    for(int i=0;i<N;i++){
-	        cin>>A[i]; 
+	        cin>>A[i];
+	        sum+=A[i];
 	    }
-	    sort(A.begin(),A.end());
-	    for(int i=0;i<N;i++){
-	        if(i<2){
-	            sum=sum+(A[i]/2);
-	        }
-	        else{
-	            sum=sum+A[i];
-	        }
+	    int maxi=INT_MAX;
+	    for(int i=0;i<N-1;i++){
+	        maxi=min(maxi,A[i]+A[i+1]);
 	    }
-	    cout<<sum<<endl;
+	    cout<<sum-maxi/2<<endl;
 	}
 }
